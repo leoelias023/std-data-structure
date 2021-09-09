@@ -35,3 +35,39 @@ With the second element of the set, iterate all the items verifying if the eleme
 ### Implementation
 
 Open this [file code](../code/sorting-algorithms/insertion-sort.c).
+
+## Selection sort
+
+Pick the minor value and put on the place of the current initial index, ordering totally.
+
+### How it works?
+
+```
+Non ordered: [3,1,6,4]
+
+Step 1:
+  - Current index: 0
+  - Minor value: 1
+  - Set: [1,3,6,4]
+
+Step 2:
+  - Current index: 1
+  - Minor value: 3
+  - Set: [1,3,6,4]
+
+Step 3:
+  - Current index: 2
+  - Minor value: 4
+  - Set: [1,3,4,6]
+
+Step 4:
+  - Current index: 3
+  - Minor value: 6
+  - Set: [1,3,4,6]
+
+Happy =) Ordered successfully
+```
+
+### Implementation
+
+A simple implementation in C language, open [here](./code/sorting-algorithms/selection-sort.c)
