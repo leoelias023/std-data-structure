@@ -71,3 +71,55 @@ Happy =) Ordered successfully
 ### Implementation
 
 A simple implementation in C language, open [here](./code/sorting-algorithms/selection-sort.c)
+
+## Shell sort
+
+The shell is the most performatic sort algorithm of quadratic complexity
+
+### How it works?
+
+Simply, this split the set of data in segments and apply the [insertion sort](#insertion-sort) for each segment.
+
+**Example**:
+
+```
+Non ordered: [44 57 11 44 96 21 9 70]
+
+H = 4
+H = 13
+
+Step 1:
+  - H: 13
+  - Set: [44 57 11 44 96 21 9 70]
+Step 2:
+  - H: 13/3 = 4
+  - Set: [44 57 11 44 96 21 9 70]
+Step 3:
+  - H: 4/3 = 1
+  Step 3.1: (init of insertion sort)
+    - I: 1
+    - Set: [44 57 11 44 96 21 9 70]
+  Step 3.2:
+    - I: 2
+    - Set: [11 44 57 44 96 21 9 70]
+  Step 3.3:
+    - I: 3
+    - Set: [11 44 44 57 96 21 9 70]
+  Step 3.4:
+    - I: 4
+    - Set: [11 44 44 57 96 21 9 70]
+  Step 3.5:
+    - I: 5
+    - Set: [11 21 44 44 57 96 9 70]
+  Step 3.6:
+    - I: 6
+    - Set: [9 11 21 44 44 57 96 70]
+  Step 3.7:
+    - I: 7
+    - Set: [9 11 21 44 44 57 70 96]
+
+```
+
+### Implementation
+
+A simple implementation made in C language, open [here](./code/sorting-algorithms/shell-sort.c)
