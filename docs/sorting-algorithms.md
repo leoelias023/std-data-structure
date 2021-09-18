@@ -123,3 +123,50 @@ Step 3:
 ### Implementation
 
 A simple implementation made in C language, open [here](./code/sorting-algorithms/shell-sort.c)
+
+## Merge Sort
+
+The merge sort is basically about the divide, solve recursively divided parts, and join all that.
+
+### How it works?
+
+Recursively split the dataset into two parts, when all the segments are equally length 2, sort these two elements, finally merge them all.
+
+**As explicit in the example below**:
+
+```
+Non ordered: [44 57 11 44 96 21 9 70]
+
+Division steps:
+
+  Step 1:
+    - vector: [44 57 11 44 96 21 9 70]
+    - Length: 8
+
+  Step 2:
+    - vector: [44 57 11 44] [96 21 9 70]
+    - Length: 4
+
+  Step 3:
+    - vector: [44 57] [11 44] [96 21] [9 70]
+    - Length: 2
+
+Sort and merge steps:
+
+  Step 4:
+    - vector: [44 57] [11 44] [21 96] [9 70]
+    - length: 2
+
+  Step 5:
+    - vector: [11 44 44 57] [9 21 70 96]
+    - length: 4
+
+  Step 6:
+    - vector: [9 11 21 44 44 57 70 96]
+    - length: 8
+
+```
+
+### Implementation
+
+An implementation in C lang can be found [here](./code/sorting-algorithms/merge-sort.c).
